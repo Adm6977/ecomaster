@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECOM MASTER — La Méthode IA Organique</title>
+<meta name="theme-color" content="#06040E">
+<style>html,body{background:#06040E !important;}
+
+/* ── TIPS CTA BUTTON ── */
+.tips-cta-wrap {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.tips-cta-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(169,111,245,0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.tips-cta-label::before,
+.tips-cta-label::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--purple-light));
+}
+.tips-cta-label::after {
+  background: linear-gradient(90deg, var(--purple-light), transparent);
+}
+
+.tips-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.3rem 3rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  text-decoration: none;
+  background: linear-gradient(135deg, rgba(123,63,228,0.9), rgba(169,111,245,0.9));
+  border: 1px solid rgba(169,111,245,0.4);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  box-shadow: 0 0 0 rgba(123,63,228,0), 
+              0 10px 30px -5px rgba(123,63,228,0.4),
+              inset 0 1px 0 rgba(255,255,255,0.15);
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Effet shine qui traverse */
+.tips-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  z-index: 1;
+}
+
+.tips-cta:hover::before { left: 130%; }
+
+/* Glow qui pulse en arrière */
+.tips-cta::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--purple-light), var(--purple), var(--purple-light));
+  border-radius: 8px;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.3s ease;
+}
+
+.tips-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(255,255,255,0.4);
+  box-shadow: 0 0 40px rgba(169,111,245,0.6),
+              0 15px 40px -5px rgba(123,63,228,0.6),
+              inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+.tips-cta:hover::after { opacity: 0.8; }
+
+.tips-cta:active { transform: translateY(-1px) scale(1.0); }
+
+.tips-cta-text { position: relative; z-index: 2; }
+
+.tips-cta-arrow {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tips-cta:hover .tips-cta-arrow {
+  transform: translateX(6px);
+  background: rgba(255,255,255,0.25);
+}
+
+.tips-cta-arrow svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--white);
+  stroke-width: 2.5;
+}
+
+/* Indicateur en bas */
+.tips-cta-hint {
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tips-cta-hint .pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  box-shadow: 0 0 10px var(--purple-light);
+  animation: ctaPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+@media (max-width: 600px) {
+     
+/* Simulateur mobile */
+#simSlider { max-width: 100% !important; }
+#simBudget { font-size: 2.5rem !important; }
+.funnel-step { width: 120px !important; padding: 1rem 0.6rem !important; }
+.funnel-step div[style*="font-size:2rem"] { font-size: 1.5rem !important; }
+
+.discord-nav-text { display: inline; font-size: 0.68rem; }
+a[href*="discord"] { padding: 0.45rem 0.7rem !important; font-size: 0.68rem !important; background: rgba(88,101,242,0.7) !important; }
+nav a.cta-nav { display: none; }
+nav > div { gap: 0.5rem; }
+a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !important; }
+     
+  .tips-cta {
+    padding: 1.1rem 2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    gap: 0.7rem;
+  }
+  .tips-cta-arrow { width: 28px; height: 28px; }
+  .tips-cta-arrow svg { width: 14px; height: 14px; }
+  .tips-cta-label { font-size: 0.65rem; }
+  .tips-cta-label::before, .tips-cta-label::after { width: 20px; }
+}
+/* ══ TESTIMONIALS ══ */
+.testi-section {
+  padding: 6rem 6vw;
+  background: var(--black2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.testi-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(123,63,228,0.12), transparent 70%);
+  pointer-events: none;
+}
+.testi-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.testi-head {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.testi-head p {
+  max-width: 580px;
+  margin: 1.2rem auto 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.testi-head .accent { color: var(--purple-light); font-weight: 500; }
+
+/* Badge click-to-play */
+.testi-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--border);
+  background: rgba(123,63,228,0.08);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple-light);
+}
+.testi-hint-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  box-shadow: 0 0 10px var(--purple-light);
+  animation: ctaPulse 1.8s ease-in-out infinite;
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+}
+
+.testi-card {
+  position: relative;
+  aspect-ratio: 9/16;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--black);
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.testi-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--purple-light);
+  box-shadow: 0 20px 50px -10px rgba(123,63,228,0.4);
+}
+.testi-card.active {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 2px var(--purple), 0 20px 60px -10px rgba(123,63,228,0.5);
+}
+
+.testi-card video,
+.testi-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.testi-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,4,14,0.3) 0%, rgba(6,4,14,0.1) 40%, rgba(6,4,14,0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 2;
+}
+/* Quand la vidéo joue, overlay + play icon disparaissent */
+.testi-card.playing .testi-overlay { opacity: 0; pointer-events: none; }
+.testi-card.playing .testi-play-icon { opacity: 0; pointer-events: none; }
+
+.testi-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(123,63,228,0.9);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 40px rgba(123,63,228,0.5), 0 0 0 6px rgba(123,63,228,0.15);
+  transition: transform 0.25s, background 0.25s, opacity 0.3s;
+  z-index: 3;
+}
+.testi-card:hover .testi-play-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--purple-light);
+}
+.testi-play-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  margin-left: 3px;
+}
+
+/
+
+.testi-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  padding: 0.35rem 0.7rem;
+  background: rgba(6,4,14,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 500;
+}
+.testi-top-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff4a4a;
+  box-shadow: 0 0 8px #ff4a4a;
+  animation: ctaPulse 1.5s ease-in-out infinite;
+}
+
+.testi-bottom {
+  position: relative;
+  z-index: 3;
+}
+.testi-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.testi-role {
+  font-size: 0.65rem;
+  color: var(--purple-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.testi-card.photo .testi-play-icon { display: none; }
+.testi-card.photo .testi-top-badge::before {
+  background: var(--purple-light);
+  box-shadow: 0 0 8px var(--purple-light);
+}
+/* Loupe au centre pour la photo */
+.testi-card.photo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(123,63,228,0.9);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 10px 40px rgba(123,63,228,0.5), 0 0 0 6px rgba(123,63,228,0.15);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 22px;
+  transition: transform 0.25s;
+  z-index: 3;
+  pointer-events: none;
+}
+.testi-card.photo:hover::after {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ══ LIGHTBOX PHOTO ══ */
+.testi-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(6,4,14,0.95);
+  backdrop-filter: blur(20px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.testi-lightbox.open {
+  display: flex;
+  opacity: 1;
+}
+.testi-lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(123,63,228,0.2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+}
+.testi-lightbox-close:hover {
+  background: var(--purple);
+  transform: rotate(90deg);
+}
+.testi-lightbox-close svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--white);
+  stroke-width: 2.5;
+  fill: none;
+}
+.testi-lightbox img {
+  max-width: min(90vw, 500px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  display: block;
+}
+
+/* ══ DASHBOARDS SECTION ══ */
+.dash-section {
+  padding: 6rem 6vw;
+  position: relative;
+  overflow: hidden;
+}
+.dash-section::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(123,63,228,0.12), transparent 70%);
+  pointer-events: none;
+}
+.dash-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.dash-head { text-align: center; margin-bottom: 3.5rem; }
+.dash-head p {
+  max-width: 600px;
+  margin: 1.2rem auto 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.dash-stat {
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(123,63,228,0.08), rgba(13,10,26,0.6));
+  border-radius: 14px;
+  padding: 1.5rem 1.3rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.dash-stat:hover { border-color: var(--purple); transform: translateY(-3px); }
+.dash-stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  color: var(--purple-light);
+  line-height: 1;
+  text-shadow: 0 0 25px rgba(169,111,245,0.4);
+}
+.dash-stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* Carousel dashboards */
+.dash-carousel {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--black2);
+  box-shadow: 0 30px 80px -20px rgba(123,63,228,0.3);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.dash-slide {
+  min-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+}
+
+.dash-carousel {
+  max-width: 400px;
+}
+
+.dash-slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .dash-carousel { max-width: 380px; }
+  .dash-slide img { height: 520px; }
+}
+
+.dash-slides {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dash-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(6,4,14,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.2s, border-color 0.2s;
+}
+.dash-nav:hover { background: var(--purple); border-color: var(--purple); }
+.dash-nav svg { width: 18px; height: 18px; stroke: var(--white); stroke-width: 2.5; fill: none; }
+.dash-prev { left: 1rem; }
+.dash-next { right: 1rem; }
+
+.dash-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.dash-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  padding: 0;
+}
+.dash-dot:hover { transform: scale(1.3); }
+.dash-dot.active {
+  background: var(--purple-light);
+  box-shadow: 0 0 10px var(--purple-light);
+  transform: scale(1.3);
+}
+
+.dash-counter {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(6,4,14,0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  z-index: 5;
+}
+.dash-counter span { color: var(--purple-light); }
+
+@media (max-width: 900px) {
+  .testi-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .dash-stats { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .testi-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .testi-play-icon { width: 48px; height: 48px; }
+  .testi-play-icon svg { width: 16px; height: 16px; }
+  .testi-fullscreen-btn { opacity: 1; width: 30px; height: 30px; }
+  .testi-card.photo::after { width: 48px; height: 48px; background-size: 18px 18px; }
+  .dash-nav { width: 36px; height: 36px; }
+  .dash-nav svg { width: 14px; height: 14px; }
+  .dash-stat-num { font-size: 1.8rem; }
+  .testi-section, .dash-section { padding: 4rem 5vw; }
+}
+/* Fullscreen custom pour vidéos */
+.testi-video-fs {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(20px);
+  z-index: 10001;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.testi-video-fs.open {
+  display: flex;
+  opacity: 1;
+}
+.testi-video-fs video {
+  max-width: min(90vw, 500px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+.testi-video-fs-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--purple);
+  border: 2px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  z-index: 10002;
+  box-shadow: 0 10px 30px rgba(123,63,228,0.5), 0 0 0 4px rgba(123,63,228,0.15);
+}
+.testi-video-fs-close:hover {
+  background: var(--purple-light);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 15px 40px rgba(169,111,245,0.7), 0 0 0 6px rgba(169,111,245,0.2);
+}
+.testi-video-fs-close svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--white);
+  stroke-width: 3;
+  fill: none;
+}
+.testi-video-fs-close:hover {
+  background: var(--purple);
+  transform: rotate(90deg);
+}
+.testi-video-fs-close svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--white);
+  stroke-width: 2.5;
+  fill: none;
+}
+--gold: #FFB84A;
+--green: #34d399;
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #7B3FE4;
+    --purple-light: #A96FF5;
+    --purple-glow: rgba(123,63,228,0.25);
+    --black: #06040E;
+    --black2: #0D0A1A;
+    --white: #F2EEF9;
+    --muted: rgba(242,238,249,0.45);
+    --border: rgba(123,63,228,0.22);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; background: #06040E; }
+
+  body {
+    background: #06040E;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ── GRAIN OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 4vw;
+    border-bottom: 1px solid var(--border);
+    background: rgba(6,4,14,0.75);
+    backdrop-filter: blur(16px);
+  }
+
+  .nav-left { display: flex; align-items: center; gap: 2rem; }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .nav-logo span { color: var(--purple-light); }
+
+  /* ── DROPDOWN MENU ── */
+  .menu-wrap { position: relative; }
+
+  .menu-trigger {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 0.55rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .menu-trigger:hover,
+  .menu-trigger.open {
+    border-color: var(--purple-light);
+    background: rgba(123,63,228,0.1);
+  }
+
+  .menu-trigger svg {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s;
+  }
+
+  .menu-trigger.open svg { transform: rotate(180deg); }
+
+  .menu-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    min-width: 220px;
+    background: rgba(13,10,26,0.96);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(123,63,228,0.1);
+  }
+
+  .menu-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .menu-dropdown a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.88rem;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .menu-dropdown a:hover {
+    background: rgba(123,63,228,0.18);
+    color: var(--purple-light);
+  }
+
+  .menu-dropdown a.active {
+    background: rgba(123,63,228,0.12);
+    color: var(--purple-light);
+  }
+
+  nav a.cta-nav {
+    background: var(--purple);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+
+  nav a.cta-nav:hover { background: var(--purple-light); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 9rem 6vw 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(123,63,228,0.28) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-glow2 {
+    position: absolute;
+    bottom: -15%;
+    left: 10%;
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(169,111,245,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    border: 1px solid var(--border);
+    background: rgba(123,63,228,0.1);
+    color: var(--purple-light);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.2rem;
+    border-radius: 999px;
+    margin-bottom: 2.2rem;
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 10vw, 9.5rem);
+    line-height: 0.92;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--purple-light);
+    display: block;
+  }
+
+  .hero-sub {
+    max-width: 580px;
+    margin: 2rem auto 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted);
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero-actions {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--purple);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 1rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 0 40px rgba(123,63,228,0.35);
+  }
+
+  .btn-primary:hover {
+    background: var(--purple-light);
+    transform: translateY(-2px);
+    box-shadow: 0 0 60px rgba(123,63,228,0.55);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 1rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--purple-light);
+    background: rgba(123,63,228,0.1);
+  }
+
+  /* ── STATS BAR ── */
+  .stats {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: rgba(13,10,26,0.8);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 0;
+  }
+
+  .stat {
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--purple-light);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+
+  /* ── SECTION ── */
+  section { padding: 7rem 6vw; }
+
+  .section-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--purple-light);
+    margin-bottom: 1rem;
+  }
+
+  /* FIX: section-title en blanc par défaut (avant il héritait bizarrement) */
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: 0.03em;
+    max-width: 700px;
+    color: var(--white);
+     margin: 0 auto; 
+    
+  }
+
+  .section-title span { color: var(--purple-light); }
+
+  /* ── METHOD ── */
+  .method {
+    background: var(--black2);
+  }
+
+  .method-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .method-desc {
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 480px;
+  }
+
+  .method-highlight {
+    display: inline;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .method-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .mcard {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    background: rgba(123,63,228,0.06);
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .mcard:hover {
+    border-color: var(--purple);
+    background: rgba(123,63,228,0.12);
+  }
+
+  .mcard-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: var(--purple-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+  }
+
+  .mcard-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+
+  .mcard-sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── WHAT YOU LEARN ── */
+  .learn { max-width: 1200px; margin: 0 auto; }
+
+  .learn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .learn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .learn-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    background: var(--black2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .learn-card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--purple), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .learn-card:hover { transform: translateY(-4px); border-color: var(--purple); }
+  .learn-card:hover::before { opacity: 1; }
+
+  .learn-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: rgba(123,63,228,0.15);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .learn-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: var(--white);
+  }
+
+  .learn-card p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  /* ── FOUNDERS ── */
+  .founders {
+    background: var(--black2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .founders::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(123,63,228,0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .founders-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .founders-photo-wrap {
+    max-width: 780px;
+    margin: 0 auto 3.5rem;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: rgba(123,63,228,0.06);
+    box-shadow: 0 30px 80px -20px rgba(123,63,228,0.35), 0 0 0 1px rgba(169,111,245,0.08);
+  }
+
+  .founders-photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(13,10,26,0.85) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .founders-photo-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(169,111,245,0.5), transparent 40%, transparent 60%, rgba(123,63,228,0.4));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .founders-photo-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .founders-photo-caption {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 4;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+    color: var(--white);
+  }
+
+  .founders-photo-caption span { color: var(--purple-light); }
+
+  .founders-bios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .founder-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.8rem 2rem;
+    background: rgba(123,63,228,0.05);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .founder-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-3px);
+  }
+
+  /* FIX: prénoms FAHD et ADAM en blanc */
+  .founder-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.08em;
+    color: var(--white);
+  }
+
+  .founder-role {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--purple-light);
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .founder-bio {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  /* ── POURQUOI CA MARCHE — grid responsive ── */
+  .pqm-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .pqm-trio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .pqm-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+    background: rgba(123,63,228,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  .pqm-card.highlight {
+    border-color: var(--purple);
+    background: rgba(123,63,228,0.1);
+  }
+  .pqm-card-sm {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.8rem;
+    background: rgba(123,63,228,0.04);
+  }
+  .pqm-big-num {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7rem;
+    color: rgba(123,63,228,0.07);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .pqm-card.highlight .pqm-big-num { color: rgba(123,63,228,0.12); }
+  .pqm-emoji { font-size: 2rem; margin-bottom: 1rem; }
+  .pqm-emoji-sm { font-size: 1.8rem; margin-bottom: 0.8rem; }
+  .pqm-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+    color: var(--white);
+  }
+  .pqm-title-sm {
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    color: var(--white);
+  }
+  .pqm-desc {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: var(--muted);
+  }
+  .pqm-desc-sm {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .pqm-banner {
+    margin-top: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(90deg, rgba(123,63,228,0.12), rgba(123,63,228,0.04));
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .pqm-banner-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--purple-light);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .pqm-banner-title span { color: var(--white); }
+  .pqm-banner-desc {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 500px;
+  }
+
+  /* ── BOOKING ── */
+  .booking {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .booking-box {
+    margin-top: 3.5rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3.5rem 3rem;
+    background: linear-gradient(135deg, rgba(123,63,228,0.1), rgba(13,10,26,0.8));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .booking-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(123,63,228,0.22), transparent 65%);
+    pointer-events: none;
+  }
+
+  .booking-box h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--white);
+  }
+
+  .booking-box p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .badge-free {
+    display: inline-block;
+    border: 1px solid rgba(169,111,245,0.4);
+    background: rgba(123,63,228,0.15);
+    color: var(--purple-light);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+  }
+
+  .footer-logo span { color: var(--purple-light); }
+
+  footer p {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  /* ── WHATSAPP FLOAT ── */
+  .wa-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #25D366;
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.75rem 1.3rem;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .wa-float:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
+
+  .wa-float svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
+
+  /* ── TIPS ── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .tips-col-head {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .tips-col-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--purple-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+  .tips-col-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    color: var(--purple-light);
+  }
+  .tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .tip-item {
+    border-left: 2px solid var(--purple);
+    padding: 1rem 1.2rem;
+    background: rgba(123,63,228,0.06);
+    border-radius: 0 10px 10px 0;
+  }
+  .tip-item.ia { border-left-color: var(--purple-light); background: rgba(169,111,245,0.06); }
+  .tip-title {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+  .tip-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in { animation: fadeUp 0.7s ease both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .method-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .learn-grid { grid-template-columns: 1fr 1fr; }
+    .founders-bios { grid-template-columns: 1fr; max-width: 480px; }
+    .stats { grid-template-columns: 1fr; }
+    .stat { border-right: none; border-bottom: 1px solid var(--border); }
+    .stat:last-child { border-bottom: none; }
+    .pqm-trio { grid-template-columns: 1fr; }
+    .tips-grid { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  /* FIX: sur mobile, tout le grid de la section "pourquoi ça marche" passe en 1 colonne */
+  @media (max-width: 700px) {
+    .pqm-duo { grid-template-columns: 1fr; gap: 1rem; }
+    .pqm-card { padding: 1.6rem 1.4rem; }
+    .pqm-card-sm { padding: 1.4rem 1.2rem; }
+    .pqm-big-num { font-size: 5rem; top: -10px; right: -5px; }
+    .pqm-banner { flex-direction: column; align-items: flex-start; padding: 1.8rem 1.5rem; gap: 1.2rem; }
+    .pqm-banner-title { font-size: 2.2rem; }
+    .pqm-banner-desc { font-size: 0.88rem; }
+  }
+
+  @media (max-width: 600px) {
+    .learn-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: clamp(3rem, 12vw, 5rem); }
+    .booking-box { padding: 2rem 1.4rem; }
+    nav { padding: 0.8rem 4vw; }
+    .nav-left { gap: 0.7rem; }
+    .nav-logo { font-size: 1.2rem; letter-spacing: 0.08em; }
+    .menu-trigger { font-size: 0.72rem; padding: 0.45rem 0.7rem; gap: 0.3rem; }
+    .menu-trigger svg { width: 10px; height: 10px; }
+    nav a.cta-nav {
+      font-size: 0.68rem;
+      padding: 0.5rem 0.9rem;
+      letter-spacing: 0.05em;
+    }
+    section { padding: 5rem 5vw; }
+    .wa-float span { display: none; }
+    .wa-float { padding: 0.8rem; }
+    .founders-photo-caption { font-size: 1.3rem; bottom: 1rem; }
+  }
+
+  /* Très petits écrans : CTA raccourci en "APPEL" */
+  @media (max-width: 380px) {
+    .nav-cta-full { display: none; }
+    .nav-cta-short { display: inline; }
+  }
+  @media (min-width: 381px) {
+    .nav-cta-full { display: inline; }
+    .nav-cta-short { display: none; }
+  }
+
+/* ── VIDEO SHOWCASE ── */
+.video-showcase {
+  padding: 5rem 6vw;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrap {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 80px -20px rgba(123,63,228,0.35), 0 0 0 1px rgba(169,111,245,0.08);
+  background: var(--black2);
+}
+
+.video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .video-showcase { padding: 3rem 5vw; }
+  .video-wrap { max-width: 300px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="/" class="nav-logo">ECOM <span>MASTER</span></a>
+    <div class="menu-wrap">
+      <button class="menu-trigger" id="menuTrigger" aria-expanded="false" aria-haspopup="true">
+        Menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="menu-dropdown" id="menuDropdown" role="menu">
+        <a href="/">Accueil</a>
+        <a href="/pages/tips-organique" class="active">Tips Organique</a>
+        <a href="/pages/packs">Nos Packs</a>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex; align-items:center; gap:0.8rem;">
+    <a href="https://discord.gg/DtdJUsHPtZ" target="_blank" style="display:inline-flex; align-items:center; gap:0.5rem; background:#5865F2; color:#fff; font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:700; padding:0.55rem 1rem; border-radius:8px; text-decoration:none; letter-spacing:0.02em; transition:all 0.2s; white-space:nowrap;" onmouseover="this.style.background='#4752C4';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#5865F2';this.style.transform='translateY(0)'">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.055a19.92 19.92 0 0 0 5.993 3.03.077.077 0 0 0 .084-.028 13.958 13.958 0 0 0 1.226-1.994.075.075 0 0 0-.041-.104 13.175 13.175 0 0 1-1.872-.892.075.075 0 0 1-.008-.125c.126-.094.252-.192.372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.1.246.198.373.292a.075.075 0 0 1-.006.125c-.598.35-1.22.645-1.873.892a.075.075 0 0 0-.041.104c.36.698.772 1.362 1.225 1.994a.076.076 0 0 0 .084.028 19.834 19.834 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+      <span class="discord-nav-text">Rejoindre</span>
+    </a>
+    <a href="https://calendly.com/ecommaster-28tp/new-meeting?month=2026-04" target="_blank" class="cta-nav">
+      <span class="nav-cta-full">Réserver mon appel</span>
+      <span class="nav-cta-short">Réserver</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div style="position:relative; z-index:1;">
+    <div class="hero-tag">La méthode qu'ils ne veulent pas que tu connaisses</div>
+    <h1>
+      <span style="color:var(--white);">VENDS EN LIGNE</span>
+      <em>SANS DÉPENSER</em>
+      <span style="color:var(--white);">UN CENTIME</span>
+    </h1>
+    <p class="hero-sub">
+      L'académie ECOM MASTER t'enseigne la méthode <strong style="color:var(--white);">E-commerce IA Organique</strong> — celle qui nous a générée plus de <strong style="color:var(--purple-light);">700 000 € de chiffre d'affaires</strong> sans investir un seul euro en publicité.
+    </p>
+    <div class="hero-actions">
+      <a href="https://calendly.com/ecommaster-28tp/new-meeting?month=2026-04" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Réserver mon appel gratuit
+      </a>
+      <a href="/pages/tips-organique" class="btn-ghost">Découvrir la méthode →</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">700K+</div>
+    <div class="stat-label">Chiffre d'affaires généré</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">0€</div>
+    <div class="stat-label">Dépensé en publicité</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">Ceux qui la maitrisent</div>
+    <div class="stat-label"> dominent le marché </div>
+  </div>
+</div>
+
+<!-- VIDEO SHOWCASE -->
+<section class="video-showcase">
+  <div class="video-wrap">
+    <video 
+      src="https://cdn.shopify.com/videos/c/o/v/1ae134de201c4848bbc0049bf1873a9d.mp4"
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      controls
+      preload="metadata">
+    </video>
+  </div>
+</section>
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testi-section">
+  <div class="testi-inner">
+    <div class="testi-head">
+      <div class="section-tag">Ils ont passé le cap</div>
+      <h2 class="section-title" style="display:inline-block;">LES RETOURS DE <span>NOS ÉLÈVES</span></h2>
+      <p>Des gens qui étaient à ta place il y a quelques mois. Aujourd'hui, ils <span class="accent">en vivent</span>. Écoute-les de leurs propres mots.</p>
+      <div class="testi-hint">
+        <span class="testi-hint-dot"></span>
+        Clique sur une vidéo pour l'écouter
+      </div>
+    </div>
+
+    <div class="testi-grid">
+
+  <div class="testi-card" data-type="video">
+    <video src="https://cdn.shopify.com/videos/c/o/v/8e30071adcb24d339f43b71ba8a40704.mov" playsinline preload="metadata" loop></video>
+   
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+    </button>
+    <div class="testi-overlay">
+      <div class="testi-top-badge">Témoignage 01</div>
+      <div class="testi-bottom">
+        <div class="testi-name">ÉLÈVE #1</div>
+        <div class="testi-role">Lancement réussi</div>
+      </div>
+    </div>
+    <div class="testi-play-icon">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+  </div>
+
+  <div class="testi-card" data-type="video">
+    <video src="https://cdn.shopify.com/videos/c/o/v/62714e4d1c2b42f7b4c07b1ac8ff6387.mov" playsinline preload="metadata" loop></video>
+    
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+    </button>
+    <div class="testi-overlay">
+      <div class="testi-top-badge">Témoignage 02</div>
+      <div class="testi-bottom">
+        <div class="testi-name">ÉLÈVE #2</div>
+        <div class="testi-role">Premières ventes organiques</div>
+      </div>
+    </div>
+    <div class="testi-play-icon">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+  </div>
+
+  <div class="testi-card" data-type="video">
+    <video src="https://cdn.shopify.com/videos/c/o/v/71d8b5c0e9a446a9841f10d4b62054e6.mp4" playsinline preload="metadata" loop></video>
+    
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+    </button>
+    <div class="testi-overlay">
+      <div class="testi-top-badge">Témoignage 03</div>
+      <div class="testi-bottom">
+        <div class="testi-name">ÉLÈVE #3</div>
+        <div class="testi-role">Scaling en cours</div>
+      </div>
+    </div>
+    <div class="testi-play-icon">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+  </div>
+
+  <div class="testi-card photo" data-type="photo">
+    <img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/IMG_6754.jpg?v=1776646038" alt="Retour élève" loading="lazy">
+    <div class="testi-overlay">
+      <div class="testi-top-badge">Capture</div>
+      <div class="testi-bottom">
+        <div class="testi-name">MESSAGE RÉEL</div>
+        <div class="testi-role">Résultat après formation</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- LIGHTBOX PHOTO -->
+<div class="testi-lightbox" id="testiLightbox">
+  <button class="testi-lightbox-close" id="testiLightboxClose" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <img id="testiLightboxImg" src="" alt="">
+</div>
+<div class="testi-video-fs" id="testiVideoFs">
+  <button class="testi-video-fs-close" id="testiVideoFsClose" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <video id="testiVideoFsPlayer" controls playsinline></video>
+</div>
+</section>
+
+<!-- ══ DASHBOARDS ══ -->
+<section class="dash-section">
+  <div class="dash-inner">
+    <div class="dash-head">
+      <div class="section-tag">Les preuves brutes</div>
+      <h2 class="section-title" style="display:inline-block;">NOS <span>DASHBOARDS SHOPIFY</span></h2>
+      <p>Pas de screenshots bidons, pas de chiffres inventés. Voilà exactement ce que notre méthode nous a généré. Les preuves, en direct de nos boutiques.</p>
+    </div>
+
+    <div class="dash-stats">
+      <div class="dash-stat">
+        <div class="dash-stat-num">700K+</div>
+        <div class="dash-stat-label">CA total généré</div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-num">0€</div>
+        <div class="dash-stat-label">Dépensé en ads</div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-num">68%</div>
+        <div class="dash-stat-label">Marge moyenne</div>
+      </div>
+      <div class="dash-stat">
+        <div class="dash-stat-num">7</div>
+        <div class="dash-stat-label">Boutiques lancées</div>
+      </div>
+    </div>
+
+    <div class="dash-carousel">
+      <div class="dash-counter"><span id="dashCurrent">1</span> / <span id="dashTotal">7</span></div>
+
+      <div class="dash-slides" id="dashSlides">
+        <div class="dash-slide"><img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/DASHBOARD_3.png?v=1776648320" alt="Dashboard Shopify" loading="lazy"></div>
+        <div class="dash-slide"><img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/DASHBOARD.png?v=1776648320" alt="Dashboard Shopify" loading="lazy"></div>
+        <div class="dash-slide"><img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/DASHBOARD_6.png?v=1776648320" alt="Dashboard Shopify" loading="lazy"></div>
+        <div class="dash-slide"><img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/DASHBOARD_1.png?v=1776648320" alt="Dashboard Shopify" loading="lazy"></div>
+        <div class="dash-slide"><img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/DASHBOARD_2.png?v=1776648320" alt="Dashboard Shopify" loading="lazy"></div>
+        <div class="dash-slide"><img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/DASHBOARD_4.png?v=1776648320" alt="Dashboard Shopify" loading="lazy"></div>
+        <div class="dash-slide"><img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/DASHBOARD_5.png?v=1776648320" alt="Dashboard Shopify" loading="lazy"></div>
+      </div>
+
+      <button class="dash-nav dash-prev" id="dashPrev" aria-label="Précédent">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="dash-nav dash-next" id="dashNext" aria-label="Suivant">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="dash-dots" id="dashDots"></div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method" id="methode">
+  <div class="method-inner">
+    <div class="method-text">
+      <div class="section-tag">La méthode</div>
+      <h2 class="section-title">L'ECOM IA <span>ORGANIQUE</span></h2>
+      <p class="method-desc">
+        Pendant que 95% des e-commerçants <strong style="color:var(--white);">brûlent leur budget</strong> sur TikTok Ads et Meta, nous avons construit une machine à vendre entièrement organique — alimentée par l'IA.
+      </p>
+
+      <!-- COMPARATIF ADS VS ORGANIQUE -->
+      <div style="margin-top:2rem; border-radius:14px; overflow:hidden; border:1px solid var(--border);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; background:rgba(255,255,255,0.03);">
+          <div style="padding:0.7rem 1rem; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); border-right:1px solid var(--border);">❌ TikTok Ads</div>
+          <div style="padding:0.7rem 1rem; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--purple-light);">✅ Organique</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--border);">
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--muted); border-right:1px solid var(--border); line-height:1.4;">1M de vues = <strong style="color:#ff6b6b;">~800€</strong> dépensés</div>
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--white); line-height:1.4;">1M de vues = <strong style="color:var(--purple-light);">0€</strong> dépensés</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--border); background:rgba(255,255,255,0.02);">
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--muted); border-right:1px solid var(--border); line-height:1.4;">Marge nette : <strong style="color:#ff6b6b;">15-25%</strong> après CPA</div>
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--white); line-height:1.4;">Marge nette : <strong style="color:var(--purple-light);">60-80%</strong> sur chaque vente</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--border);">
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--muted); border-right:1px solid var(--border); line-height:1.4;">Tu stop les ads → <strong style="color:#ff6b6b;">tu stop les ventes</strong></div>
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--white); line-height:1.4;">Une vidéo peut <strong style="color:var(--purple-light);">péter à tout moment</strong> — même 6 mois après</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--border); background:rgba(255,255,255,0.02);">
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--muted); border-right:1px solid var(--border); line-height:1.4;">Risque financier <strong style="color:#ff6b6b;">dès le 1er jour</strong></div>
+          <div style="padding:0.85rem 1rem; font-size:0.82rem; color:var(--white); line-height:1.4;"><strong style="color:var(--purple-light);">Zéro risque</strong> — tu commences sans budget</div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.2rem; padding:1rem 1.2rem; border-radius:10px; background:rgba(123,63,228,0.1); border:1px solid rgba(123,63,228,0.3); font-size:0.85rem; color:var(--purple-light); line-height:1.6;">
+        💡 <strong>La porte d'entrée dans l'ecom sans risque.</strong> Pas besoin de budget pub pour commencer — juste une méthode, de la constance, et l'IA pour scaler.
+      </div>
+    </div>
+
+    <div class="method-cards">
+      <div class="mcard">
+        <div class="mcard-icon">🤖</div>
+        <div>
+          <div class="mcard-title">Sites générés par IA</div>
+          <div class="mcard-sub">Boutiques Shopify haute conversion créées en quelques heures — design, copy, structure inclus.</div>
+        </div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-icon">🎯</div>
+        <div>
+          <div class="mcard-title">Produits gagnants</div>
+          <div class="mcard-sub">Repère les produits qui cartonnent en organique avant que tout le monde se batte dessus.</div>
+        </div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-icon">🔥</div>
+        <div>
+          <div class="mcard-title">Contenu qui explose</div>
+          <div class="mcard-sub">Une seule vidéo peut faire 1M de vues gratuitement — et générer autant qu'une campagne ads à 2 000€.</div>
+        </div>
+      </div>
+      <div class="mcard">
+        <div class="mcard-icon">📈</div>
+        <div>
+          <div class="mcard-title">Marges incomparables</div>
+          <div class="mcard-sub">60 à 80% de marge nette sur chaque vente. Zéro CPA, zéro CPM, zéro dépendance aux plateformes pub.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<<!-- WHAT YOU LEARN -->
+<section style="padding:5rem 6vw; background:var(--black2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="learn-header">
+      <div>
+        <div class="section-tag">Le programme</div>
+        <h2 class="section-title">CE QUE TU VAS <span>MAÎTRISER</span></h2>
+      </div>
+      <a href="https://www.masterecom.fr/pages/tips-organique" target="_blank" class="btn-primary">Commencer maintenant →</a>
+    </div>
+
+    <!-- TABS -->
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem;">
+      <button class="learn-tab active" data-tab="0">01 — Site IA</button>
+      <button class="learn-tab" data-tab="1">02 — Produits</button>
+      <button class="learn-tab" data-tab="2">03 — Agents</button>
+      <button class="learn-tab" data-tab="3">04 — Organique</button>
+      <button class="learn-tab" data-tab="4">05 — IA & Scale</button>
+      <button class="learn-tab" data-tab="5">06 — Liberté</button>
+    </div>
+
+    <!-- PANELS -->
+    <div id="learnPanels">
+
+      <div class="learn-panel active" data-panel="0" style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.14em; color:var(--purple-light); margin-bottom:0.8rem; text-transform:uppercase;">Module 01</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--white); margin-bottom:1rem; line-height:1.1;">CRÉATION DE SITE<br><span style="color:var(--purple-light);">AVEC L'IA</span></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">Apprends à créer des boutiques Shopify qui convertissent en quelques heures grâce à l'IA — pages produits, copywriting, design, structure. Tout ce qu'un prestataire te facturerait 3 000€.</p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Générer une page produit qui convertit en 10 min</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Copywriting IA adapté à ta niche</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Structure qui pousse à l'achat instinctif</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(123,63,228,0.15),rgba(13,10,26,0.8)); border:1px solid rgba(123,63,228,0.3); border-radius:16px; padding:2rem; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:4rem; color:var(--purple-light); line-height:1;">3h</div>
+          <div style="font-size:0.85rem; color:var(--muted); margin-top:0.5rem;">C'est le temps moyen pour créer une boutique complète avec notre méthode IA</div>
+          <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); font-size:0.78rem; color:var(--muted);">vs <strong style="color:#ff6b6b;">3 000€</strong> chez un prestataire classique</div>
+        </div>
+      </div>
+
+      <div class="learn-panel" data-panel="1" style="display:none; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.14em; color:var(--purple-light); margin-bottom:0.8rem; text-transform:uppercase;">Module 02</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--white); margin-bottom:1rem; line-height:1.1;">TROUVER LES<br><span style="color:var(--purple-light);">PRODUITS GAGNANTS</span></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">Notre méthode propriétaire pour repérer les produits qui cartonnent en organique avant que tout le monde se batte dessus. Hashtags, commentaires, signaux faibles — tu vois ce que les autres ratent.</p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Les 3 signaux de validation d'un produit</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Comment lire les commentaires TikTok comme un pro</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Zone chaude hashtag : 10M–500M de vues</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(123,63,228,0.15),rgba(13,10,26,0.8)); border:1px solid rgba(123,63,228,0.3); border-radius:16px; padding:2rem; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:4rem; color:var(--purple-light); line-height:1;">95%</div>
+          <div style="font-size:0.85rem; color:var(--muted); margin-top:0.5rem;">des e-commerçants choisissent leur produit "au feeling" — et se plantent</div>
+          <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); font-size:0.78rem; color:var(--muted);">Toi tu valides avec <strong style="color:var(--purple-light);">des données réelles</strong> avant de commander</div>
+        </div>
+      </div>
+
+      <div class="learn-panel" data-panel="2" style="display:none; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.14em; color:var(--purple-light); margin-bottom:0.8rem; text-transform:uppercase;">Module 03</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--white); margin-bottom:1rem; line-height:1.1;">AGENTS &<br><span style="color:var(--purple-light);">FOURNISSEURS</span></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">Accède à notre réseau d'agents fiables et nos techniques pour négocier des prix imbattables. Fini les arnaques AliExpress et les livraisons à 30 jours.</p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Nos messages types pour contacter un agent</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Négocier les prix et délais de livraison</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Sécuriser sa supply chain dès le départ</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(123,63,228,0.15),rgba(13,10,26,0.8)); border:1px solid rgba(123,63,228,0.3); border-radius:16px; padding:2rem; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:4rem; color:var(--purple-light); line-height:1;">-40%</div>
+          <div style="font-size:0.85rem; color:var(--muted); margin-top:0.5rem;">de coût produit en moyenne quand tu passes par un agent vs AliExpress direct</div>
+          <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); font-size:0.78rem; color:var(--muted);">= <strong style="color:var(--purple-light);">marge supplémentaire</strong> sur chaque vente</div>
+        </div>
+      </div>
+
+      <div class="learn-panel" data-panel="3" style="display:none; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.14em; color:var(--purple-light); margin-bottom:0.8rem; text-transform:uppercase;">Module 04</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--white); margin-bottom:1rem; line-height:1.1;">LA MÉTHODE<br><span style="color:var(--purple-light);">ORGANIQUE</span></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">Le cœur du programme. Une seule vidéo peut faire 1 million de vues gratuitement — et générer autant qu'une campagne ads à 2 000€. Sans CPA. Sans risque. Sans dépendance.</p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Hooks qui stoppent le scroll en 3 secondes</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Structure de vidéo qui convertit</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Régularité + analyse = croissance inévitable</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(123,63,228,0.15),rgba(13,10,26,0.8)); border:1px solid rgba(123,63,228,0.3); border-radius:16px; padding:2rem; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:4rem; color:var(--purple-light); line-height:1;">0€</div>
+          <div style="font-size:0.85rem; color:var(--muted); margin-top:0.5rem;">de budget publicitaire pour générer du trafic — et potentiellement 1M de vues</div>
+          <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); font-size:0.78rem; color:var(--muted);">vs <strong style="color:#ff6b6b;">800€</strong> pour 1M de vues en TikTok Ads</div>
+        </div>
+      </div>
+
+      <div class="learn-panel" data-panel="4" style="display:none; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.14em; color:var(--purple-light); margin-bottom:0.8rem; text-transform:uppercase;">Module 05</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--white); margin-bottom:1rem; line-height:1.1;">OPTIMISATION<br><span style="color:var(--purple-light);">IA & SCALE</span></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">Utilise l'IA pour automatiser tout ce qui te prend du temps : SAV, descriptions produits, emails, hooks, analyse de stats. Tu scales sans travailler plus.</p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Prompts exacts qu'on utilise au quotidien</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> SAV automatisé avec IA</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Emails & flows Klaviyo générés en 5 min</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(123,63,228,0.15),rgba(13,10,26,0.8)); border:1px solid rgba(123,63,228,0.3); border-radius:16px; padding:2rem; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:4rem; color:var(--purple-light); line-height:1;">10x</div>
+          <div style="font-size:0.85rem; color:var(--muted); margin-top:0.5rem;">plus de contenu produit en même temps grâce aux workflows IA qu'on t'enseigne</div>
+          <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); font-size:0.78rem; color:var(--muted);">Le même travail, <strong style="color:var(--purple-light);">10 fois plus vite</strong></div>
+        </div>
+      </div>
+
+      <div class="learn-panel" data-panel="5" style="display:none; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.14em; color:var(--purple-light); margin-bottom:0.8rem; text-transform:uppercase;">Module 06</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--white); margin-bottom:1rem; line-height:1.1;">SCALE &<br><span style="color:var(--purple-light);">LIBERTÉ FINANCIÈRE</span></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">De ta première vente à un business qui tourne sans toi. Délégation, systèmes, liberté géographique. L'objectif final : un revenu passif solide depuis n'importe où dans le monde.</p>
+          <div style="display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Systèmes pour déléguer sans perdre le contrôle</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Passer de 1k€ à 10k€/mois méthodiquement</div>
+            <div style="display:flex; align-items:center; gap:0.7rem; font-size:0.85rem; color:var(--white);"><span style="color:var(--purple-light);">→</span> Business qui génère même quand tu dors</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(123,63,228,0.15),rgba(13,10,26,0.8)); border:1px solid rgba(123,63,228,0.3); border-radius:16px; padding:2rem; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:4rem; color:var(--purple-light); line-height:1;">700K€</div>
+          <div style="font-size:0.85rem; color:var(--muted); margin-top:0.5rem;">générés par Fahd & Adam à 20 et 21 ans — sans ads, sans investisseurs, sans bureau</div>
+          <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); font-size:0.78rem; color:var(--muted);">La preuve que <strong style="color:var(--purple-light);">la méthode fonctionne</strong></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.learn-tab {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+.learn-tab:hover { color: var(--white); border-color: var(--purple); }
+.learn-tab.active { background: var(--purple); border-color: var(--purple); color: var(--white); }
+@media (max-width: 600px) {
+  #learnPanels .learn-panel { grid-template-columns: 1fr !important; }
+  .learn-tab { font-size: 0.7rem; padding: 0.45rem 0.8rem; }
+}
+</style>
+
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.learn-tab');
+  var panels = document.querySelectorAll('.learn-panel');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var idx = tab.dataset.tab;
+      tabs.forEach(function(t) { t.classList.remove('active'); });
+      panels.forEach(function(p) { p.style.display = 'none'; });
+      tab.classList.add('active');
+      var panel = document.querySelector('.learn-panel[data-panel="' + idx + '"]');
+      panel.style.display = 'grid';
+    });
+  });
+})();
+</script>
+
+<!-- FOUNDERS -->
+<section class="founders">
+  <div class="founders-inner">
+    <div style="text-align:center; margin-bottom:3.5rem;">
+      <div class="section-tag">Les fondateurs</div>
+      <h2 class="section-title" style="display:inline-block;">FAHD & <span>ADAM</span></h2>
+      <p style="font-size:0.95rem; color:var(--muted); max-width:500px; margin:1rem auto 0; line-height:1.7;">
+        Deux fondateurs, une méthode. Plus de 700 000€ générés sans un seul euro de budget publicitaire.
+      </p>
+    </div>
+
+    <div class="founders-photo-wrap">
+      <img src="https://cdn.shopify.com/s/files/1/0811/6840/0598/files/maroc_short.png?v=1776647170" alt="Fahd et Adam — Fondateurs ECOM MASTER" loading="lazy">
+      <div class="founders-photo-caption">FAHD <span>&</span> ADAM</div>
+    </div>
+
+    <div class="founders-bios">
+      <div class="founder-card">
+        <!-- FIX: FAHD en blanc via .founder-name { color: var(--white) } -->
+        <div class="founder-name">FAHD</div>
+        <div class="founder-role">21 ans · Co-Fondateur · ECOM MASTER</div>
+        <p class="founder-bio">
+         Spécialisé en <strong style="color:#6C63FF;">marketing IA</strong> et en <strong style="color:#6C63FF;">création de marques</strong>, Fahd a participé à la création de <strong><u>plus de 4 marques reconnues mondialement</u></strong>.
+Il maîtrise l’art de concevoir des <strong>angles marketing performants</strong> et des <strong>créas optimisées grâce à l’intelligence artificielle</strong>.
+Grâce à ses différentes boutiques, il a généré <strong style="color:#00C897;">+700 000€ de chiffre d’affaires</strong>.
+Son expertise : <strong><u>exploiter l’IA pour produire des contenus organiques puissants</u></strong> et maximiser la performance marketing.
+        </p>
+      </div>
+      <div class="founder-card">
+        <!-- FIX: ADAM en blanc via .founder-name { color: var(--white) } -->
+        <div class="founder-name">ADAM</div>
+        <div class="founder-role">20 ans · Co-Fondateur · ECOM MASTER</div>
+        <p class="founder-bio">
+          Spécialisé en <strong style="color:#A78BFA;">développement web</strong> et en <strong style="color:#A78BFA;">branding</strong>, Adam combine <strong>intelligence artificielle</strong> et <strong>vision marketing</strong> pour créer des sites performants et impactants.
+Il maîtrise la <strong>structure</strong>, le <strong>design</strong> et l’<strong>optimisation</strong> pour transformer une idée en <strong><u>véritable machine à vendre</u></strong>.
+Grâce à une approche <strong><u>100% organique</u></strong>, il a généré <strong style="color:#34D399;">+450K€ de chiffre d’affaires</strong> à travers ses boutiques.
+<strong style="color:#C4B5FD;"><u>Également spécialisé en TikTok Ads</u>, il maîtrise le passage de l’organique au paid pour scaler efficacement et générer des résultats constants.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIC PSYCHOLOGY -->
+<section style="background:var(--black2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:5rem 6vw;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:4rem;">
+      <div class="section-tag">Pourquoi ça marche</div>
+      <h2 class="section-title" style="display:inline-block;">LA PUB ILS <span>SCROLLENT.</span><br>L'ORGANIQUE ILS <span>ACHÈTENT.</span></h2>
+      <p style="font-size:0.95rem; color:var(--muted); max-width:600px; margin:1.5rem auto 0; line-height:1.8;">
+        Règle le budget et vois ce qui se passe réellement avec tes marges.
+      </p>
+    </div>
+
+    <!-- SIMULATEUR INTERACTIF -->
+<div style="background:rgba(255,255,255,0.02); border:1px solid var(--border); border-radius:20px; padding:2.5rem; margin-bottom:3rem;">
+  <div style="text-align:center; margin-bottom:2rem;">
+    <div style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--purple-light); margin-bottom:0.8rem;">Simulateur — Objectif CA mensuel</div>
+    <div style="font-family:'Bebas Neue',sans-serif; font-size:3.5rem; color:var(--white);" id="simBudget">5 000€</div>
+    <div style="font-size:0.75rem; color:var(--muted); margin-bottom:0.8rem;">de chiffre d'affaires visé</div>
+    <input type="range" id="simSlider" min="1000" max="50000" step="1000" value="5000"
+      style="width:100%; max-width:400px; accent-color:var(--purple);">
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem 0.9rem;">
+    <div style="border:1px solid rgba(255,107,107,0.3); border-radius:14px; padding:1.2rem 0.9rem; background:rgba(255,107,107,0.05);">
+      <div style="font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:#ff6b6b; margin-bottom:1.2rem;">❌ TikTok Ads</div>
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-bottom:0.3rem;">Budget ads nécessaire</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:#ff6b6b;" id="simAdsBudget">1 500€</div>
+        </div>
+        <div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-bottom:0.3rem;">Marge nette estimée</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:#ff6b6b;" id="simAdsMarge">750€</div>
+        </div>
+        <div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-bottom:0.3rem;">Si tu stop les ads</div>
+          <div style="font-size:0.85rem; color:#ff6b6b; font-weight:600;">→ Ventes = 0 immédiatement</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="border:1px solid rgba(123,63,228,0.4); border-radius:14px; padding:1.2rem 0.9rem; background:rgba(123,63,228,0.08);">
+      <div style="font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--purple-light); margin-bottom:1.2rem;">✅ Organique</div>
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-bottom:0.3rem;">Budget dépensé</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--purple-light);">0€</div>
+        </div>
+        <div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-bottom:0.3rem;">Marge nette estimée</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--purple-light);" id="simOrgaMarge">3 250€</div>
+        </div>
+        <div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-bottom:0.3rem;">Si tu stop de poster</div>
+          <div style="font-size:0.85rem; color:var(--purple-light); font-weight:600;">→ Vidéos continuent de tourner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem; text-align:center; padding:1rem; border-radius:10px; background:rgba(123,63,228,0.1); border:1px solid rgba(123,63,228,0.2);">
+    <span style="font-size:0.85rem; color:var(--white);">En organique tu gardes <strong style="color:var(--purple-light);" id="simDiff">+2 500€</strong> de plus dans ta poche pour le même CA</span>
+  </div>
+
+  <div style="margin-top:0.8rem; text-align:center; font-size:0.72rem; color:var(--muted);">
+    * Chiffres approximatifs basés sur des moyennes du marché. Les résultats varient selon chaque boutique, produit et niche.
+  </div>
+</div>
+
+    <!-- FUNNEL ANIMÉ -->
+    <div style="text-align:center; margin-bottom:1rem;">
+      <div style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--purple-light); margin-bottom:2rem;">Le funnel organique — comment ça marche</div>
+      <div style="display:flex; align-items:center; justify-content:flex-start; gap:0; position:relative; overflow-x:auto; padding-bottom:0.5rem;"
+
+        <div class="funnel-step" style="text-align:center; padding:1.5rem 1rem; background:rgba(123,63,228,0.1); border:1px solid rgba(123,63,228,0.3); border-radius:12px; width:160px; cursor:pointer; transition:all 0.3s;" onclick="activateFunnel(this, 'step1')">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">📱</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1rem; color:var(--white);">TA VIDÉO</div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-top:0.3rem;">TikTok / Insta</div>
+        </div>
+        <div style="font-size:1.5rem; color:var(--purple-light); padding:0 0.3rem;">→</div>
+        <div class="funnel-step" style="text-align:center; padding:1.5rem 1rem; background:rgba(123,63,228,0.1); border:1px solid rgba(123,63,228,0.3); border-radius:12px; width:160px; cursor:pointer; transition:all 0.3s;" onclick="activateFunnel(this, 'step2')">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🔥</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1rem; color:var(--white);">L'ALGO PUSH</div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-top:0.3rem;">0€ dépensé</div>
+        </div>
+        <div style="font-size:1.5rem; color:var(--purple-light); padding:0 0.3rem;">→</div>
+        <div class="funnel-step" style="text-align:center; padding:1.5rem 1rem; background:rgba(123,63,228,0.1); border:1px solid rgba(123,63,228,0.3); border-radius:12px; width:160px; cursor:pointer; transition:all 0.3s;" onclick="activateFunnel(this, 'step3')">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">👀</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1rem; color:var(--white);">IL REGARDE</div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-top:0.3rem;">Pas de "c'est une pub"</div>
+        </div>
+        <div style="font-size:1.5rem; color:var(--purple-light); padding:0 0.3rem;">→</div>
+        <div class="funnel-step" style="text-align:center; padding:1.5rem 1rem; background:rgba(123,63,228,0.1); border:1px solid rgba(123,63,228,0.3); border-radius:12px; width:160px; cursor:pointer; transition:all 0.3s;" onclick="activateFunnel(this, 'step4')">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">💸</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1rem; color:var(--white);">IL ACHÈTE</div>
+          <div style="font-size:0.72rem; color:var(--muted); margin-top:0.3rem;">Marge 60-80%</div>
+        </div>
+      </div>
+
+      <!-- Détail au clic -->
+      <div id="funnelDetail" style="margin-top:1.5rem; padding:1.2rem 2rem; border-radius:12px; background:rgba(123,63,228,0.12); border:1px solid rgba(123,63,228,0.3); display:none; max-width:500px; margin-left:auto; margin-right:auto; text-align:left;">
+        <div id="funnelDetailText" style="font-size:0.9rem; color:var(--white); line-height:1.7;"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+(function() {
+  var slider = document.getElementById('simSlider');
+  if (!slider) return;
+
+  function update() {
+    var ca = parseInt(slider.value);
+    document.getElementById('simBudget').textContent = ca.toLocaleString('fr-FR') + '€';
+
+    // Ads : ~30% du CA en budget, marge nette ~15% du CA
+    var adsBudget = Math.round(ca * 0.30);
+    var adsMarge = Math.round(ca * 0.15);
+    document.getElementById('simAdsBudget').textContent = adsBudget.toLocaleString('fr-FR') + '€';
+    document.getElementById('simAdsMarge').textContent = adsMarge.toLocaleString('fr-FR') + '€';
+
+    // Organique : 0€ budget, marge nette ~65% du CA
+    var orgaMarge = Math.round(ca * 0.65);
+    document.getElementById('simOrgaMarge').textContent = orgaMarge.toLocaleString('fr-FR') + '€';
+
+    var diff = orgaMarge - adsMarge;
+    document.getElementById('simDiff').textContent = '+' + diff.toLocaleString('fr-FR') + '€';
+  }
+
+  slider.addEventListener('input', update);
+  update();
+})();
+
+// ── FUNNEL ──
+var funnelTexts = {
+  step1: "🎬 <strong>Ta vidéo</strong> — filmée à l'iPhone, lumière naturelle. Pas besoin de studio. L'algo juge sur l'engagement, pas sur la qualité de production.",
+  step2: "🔥 <strong>L'algorithme te push</strong> — gratuitement. Il distribue ta vidéo aux personnes les plus susceptibles d'être intéressées. Tu paies 0€ pour ça.",
+  step3: "👀 <strong>Il regarde sans se méfier</strong> — parce que ce n'est pas une pub. Son cerveau n'est pas en mode 'skip'. Il s'arrête, il explore ton profil, il se convainc tout seul.",
+  step4: "💸 <strong>La vente se fait seule</strong> — il arrive sur ton site déjà convaincu. Avec une page produit bien construite (IA + nos templates), le taux de conversion est incomparable."
+};
+
+function activateFunnel(el, step) {
+  document.querySelectorAll('.funnel-step').forEach(function(s) {
+    s.style.background = 'rgba(123,63,228,0.1)';
+    s.style.borderColor = 'rgba(123,63,228,0.3)';
+    s.style.transform = 'translateY(0)';
+  });
+  el.style.background = 'rgba(123,63,228,0.25)';
+  el.style.borderColor = 'var(--purple-light)';
+  el.style.transform = 'translateY(-4px)';
+  var detail = document.getElementById('funnelDetail');
+  detail.style.display = 'block';
+  document.getElementById('funnelDetailText').innerHTML = funnelTexts[step];
+}
+</script>
+<!-- TIPS -->
+<section>
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:4rem;">
+      <div class="section-tag">Conseils exclusifs</div>
+      <h2 class="section-title" style="display:inline-block;">NOS TIPS <span>GRATUITS</span></h2>
+      <p style="font-size:0.95rem; color:var(--muted); max-width:560px; margin:1.2rem auto 0; line-height:1.8;">Des conseils concrets qu'on applique nous-mêmes, sur l'organique et sur l'IA.</p>
+    </div>
+
+    <div class="tips-grid">
+
+      <div>
+        <div class="tips-col-head">
+          <div class="tips-col-icon">📱</div>
+          <div class="tips-col-title">TIPS ORGANIQUE</div>
+        </div>
+        <div class="tips-list">
+          <div class="tip-item">
+            <div class="tip-title">🎬 Les 3 premières secondes, c'est tout</div>
+            <p class="tip-desc">Si ton hook ne captive pas dans les 3 premières secondes, la vidéo est morte. Commence par le résultat, pas par l'introduction.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-title">🔁 La régularité bat la viralité</div>
+            <p class="tip-desc">Poster 1 vidéo parfaite par mois ne sert à rien. L'algorithme récompense la constance. 1 vidéo par jour, même imparfaite, bat 1 chef-d'œuvre mensuel.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-title">🛍️ Vends sans vendre</div>
+            <p class="tip-desc">Ne fais pas de pub déguisée. Montre le produit en situation réelle, donne de la valeur, raconte une histoire. Les gens achètent ce qu'ils veulent être.</p>
+          </div>
+          <div class="tip-item">
+            <div class="tip-title">🔗 Ta bio, c'est ta landing page</div>
+            <p class="tip-desc">Quand quelqu'un visite ton profil, tu as 3 secondes pour le convaincre de cliquer sur le lien. Bio claire, lien direct vers le site, accroche qui donne envie.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tips-col-head">
+          <div class="tips-col-icon">🤖</div>
+          <div class="tips-col-title">TIPS IA</div>
+        </div>
+        <div class="tips-list">
+          <div class="tip-item ia">
+            <div class="tip-title">🏪 Site Shopify en quelques heures</div>
+            <p class="tip-desc">Avec les bons prompts, l'IA génère tes pages produits, descriptions, FAQ, et même tes emails de relance. Ce qui prenait une semaine prend maintenant une matinée.</p>
+          </div>
+          <div class="tip-item ia">
+            <div class="tip-title">✍️ Copy qui convertit</div>
+            <p class="tip-desc">L'IA écrit mieux que 90% des copywriters débutants si tu sais comment la prompter. On t'enseigne exactement comment formuler tes demandes pour obtenir du copy qui vend.</p>
+          </div>
+          <div class="tip-item ia">
+            <div class="tip-title">🔍 Trouve les produits gagnants avec l'IA</div>
+            <p class="tip-desc">Utilise l'IA pour analyser les tendances, identifier les niches émergentes et valider un produit avant de le lancer. Fini le test à l'aveugle.</p>
+          </div>
+          <div class="tip-item ia">
+            <div class="tip-title">⚙️ Automatise ton SAV</div>
+            <p class="tip-desc">Un chatbot IA bien configuré répond à 80% des questions clients sans intervention humaine. Tu scales sans recruter. Ton temps est libéré pour ce qui compte vraiment.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<!-- CTA VERS PAGE TIPS -->
+<div class="tips-cta-wrap">
+  <div class="tips-cta-label">Encore plus de value</div>
+  <a href="/pages/tips-organique" class="tips-cta">
+    <span class="tips-cta-text">Voir tous les tips gratuits</span>
+    <span class="tips-cta-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </span>
+  </a>
+  <div class="tips-cta-hint">
+    <span class="pulse-dot"></span>
+    <span>Guide complet · Quiz · Checklist interactive · 100% gratuit</span>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- APERÇU PACKS -->
+<section style="width:100%; padding:5rem 1.5rem;">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+    <div class="section-tag">Nos offres</div>
+    <h2 class="section-title">PRÊT À <span>PASSER</span> À L'ACTION ?</h2>
+    <p style="max-width:520px; margin:1.2rem auto 3rem; font-size:1rem; line-height:1.75; color:var(--muted); text-align:center;">
+      La théorie c'est bien. L'accompagnement, c'est ce qui fait la différence entre ceux qui vendent et ceux qui galèrent.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-bottom:2.5rem;">
+
+      <!-- Pack 1 -->
+      <div style="border:1px solid var(--border); border-radius:18px; padding:1.8rem 1.5rem; background:linear-gradient(160deg,rgba(123,63,228,0.07),var(--black2)); text-align:left; transition:all 0.3s;" onmouseover="this.style.borderColor='var(--purple)';this.style.transform='translateY(-6px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+        <div style="font-size:1.8rem; margin-bottom:0.8rem;">🎯</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.06em; color:var(--white); margin-bottom:0.4rem;">PRODUITS GAGNANTS</div>
+        <div style="font-size:0.82rem; color:var(--muted); line-height:1.5; margin-bottom:1.2rem;">10 produits testés et approuvés par nous — validés en organique, prêts à vendre.</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--white); margin-bottom:1.2rem;">79,99€</div>
+        <div style="font-size:0.78rem; color:var(--purple-light);">✓ Niche · Angles · Pourquoi ça convertit</div>
+      </div>
+
+      <!-- Pack 2 : mis en avant -->
+      <div style="border:1px solid var(--purple); border-radius:18px; padding:1.8rem 1.5rem; background:linear-gradient(160deg,rgba(123,63,228,0.18),rgba(13,10,26,0.95)); text-align:left; box-shadow:0 20px 60px -15px rgba(123,63,228,0.4); position:relative; overflow:hidden; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--purple-light),transparent);"></div>
+        <div style="position:absolute; top:1rem; right:1rem; font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:700; padding:0.3rem 0.8rem; border-radius:999px; background:rgba(123,63,228,0.25); border:1px solid rgba(169,111,245,0.5); color:var(--purple-light);">🔥 Populaire</div>
+        <div style="font-size:1.8rem; margin-bottom:0.8rem;">👥</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.06em; color:var(--white); margin-bottom:0.4rem;">MASTERMIND COLLECTIF</div>
+        <div style="font-size:0.82rem; color:var(--muted); line-height:1.5; margin-bottom:1.2rem;">5 soirs sur 7, groupe de 10 max, coaching live personnalisé sur ta boutique.</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:var(--purple-light); margin-bottom:0.3rem;">350€</div>
+        <div style="font-size:0.75rem; color:var(--green); margin-bottom:1.2rem;">-100€ si tu renouvelles la semaine suivante</div>
+        <div style="font-size:0.78rem; color:var(--purple-light);">✓ Discord privé · Rôle à vie · 10 personnes max</div>
+      </div>
+
+      <!-- Pack 3 -->
+      <div style="border:1px solid rgba(255,184,74,0.3); border-radius:18px; padding:1.8rem 1.5rem; background:linear-gradient(160deg,rgba(255,184,74,0.07),rgba(13,10,26,0.95)); text-align:left; transition:all 0.3s;" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-6px)'" onmouseout="this.style.borderColor='rgba(255,184,74,0.3)';this.style.transform='translateY(0)'">
+        <div style="font-size:1.8rem; margin-bottom:0.8rem;">🚀</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.06em; color:var(--white); margin-bottom:0.4rem;">COACHING PRIVÉ 1-ON-1</div>
+        <div style="font-size:0.82rem; color:var(--muted); line-height:1.5; margin-bottom:1.2rem;">1 mois complet, accompagnement total sur ta boutique. 5 places max par mois.</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:#FFB84A; margin-bottom:1.2rem;">800€</div>
+        <div style="font-size:0.78rem; color:#FFB84A;">✓ Agent exclusif · TikTok Ads · Site IA · Cercle privé</div>
+      </div>
+
+    </div>
+
+    <a href="/pages/packs" style="display:inline-flex; align-items:center; gap:0.6rem; background:linear-gradient(135deg,var(--purple),#9b59f5); color:var(--white); font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:600; padding:1.1rem 2.8rem; border-radius:8px; text-decoration:none; transition:all 0.2s; box-shadow:0 0 50px rgba(123,63,228,0.4);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 0 80px rgba(123,63,228,0.7)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 0 50px rgba(123,63,228,0.4)'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      Voir tous les packs en détail
+    </a>
+
+    <p style="margin-top:1rem; font-size:0.78rem; color:var(--muted);">Pas sûr de quel pack choisir ? <a href="https://calendly.com/ecommaster-28tp/new-meeting?month=2026-04" target="_blank" style="color:var(--purple-light); text-decoration:none;">Réserve un appel gratuit de 15 min →</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ECOM <span>MASTER</span></div>
+  <p>© 2026 ECOM MASTER — Fahd & Adam. Tous droits réservés.</p>
+  <p style="color:var(--muted); font-size:0.72rem;">La méthode Ecom IA Organique</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/33614640988" target="_blank" class="wa-float" aria-label="Contactez-nous sur WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+  <span>Nous contacter</span>
+</a>
+
+<script>
+  // ── DROPDOWN MENU ──
+  (function() {
+    var trigger = document.getElementById('menuTrigger');
+    var dropdown = document.getElementById('menuDropdown');
+    if (!trigger || !dropdown) return;
+
+    function toggleMenu(open) {
+      var isOpen = open !== undefined ? open : !dropdown.classList.contains('open');
+      dropdown.classList.toggle('open', isOpen);
+      trigger.classList.toggle('open', isOpen);
+      trigger.setAttribute('aria-expanded', isOpen);
+    }
+
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target) && !trigger.contains(e.target)) {
+        toggleMenu(false);
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') toggleMenu(false);
+    });
+  })();
+
+  // ── SCROLL FADE-IN ──
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(el) {
+      if (el.isIntersecting) {
+        el.target.style.opacity = '1';
+        el.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.learn-card, .mcard, .founder-card, .stat, .founders-photo-wrap, .pqm-card, .pqm-card-sm, .tip-item').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    observer.observe(el);
+  });
+// ── TESTIMONIALS ──
+(function() {
+  var cards = document.querySelectorAll('.testi-card[data-type="video"]');
+  var photoCards = document.querySelectorAll('.testi-card[data-type="photo"]');
+  var lightbox = document.getElementById('testiLightbox');
+  var lightboxImg = document.getElementById('testiLightboxImg');
+  var lightboxClose = document.getElementById('testiLightboxClose');
+
+  // --- VIDÉOS ---
+cards.forEach(function(card) {
+  var video = card.querySelector('video');
+  var fsBtn = card.querySelector('.testi-fullscreen-btn');
+  if (!video) return;
+
+  
+
+  // Clic sur la card = play/pause
+  card.addEventListener('click', function(e) {
+    if (e.target.closest('.testi-fullscreen-btn')) return;
+
+    cards.forEach(function(other) {
+      if (other !== card) {
+        var v = other.querySelector('video');
+        if (v) { v.pause(); v.currentTime = 0; v.muted = true; v.controls = false; }
+        other.classList.remove('playing', 'active');
+      }
+    });
+
+    if (card.classList.contains('playing')) {
+      video.pause();
+      card.classList.remove('playing', 'active');
+      video.controls = false;
+    } else {
+      video.muted = false;
+      video.controls = true;
+      video.play();
+      card.classList.add('playing', 'active');
+    }
+  });
+});
+
+    
+
+  // --- PHOTOS (lightbox) ---
+  photoCards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      var img = card.querySelector('img');
+      if (!img) return;
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function() { lightboxImg.src = ''; }, 300);
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+})();
+
+// ── DASHBOARDS CAROUSEL ──
+(function() {
+  var slides = document.getElementById('dashSlides');
+  if (!slides) return;
+  var total = slides.children.length;
+  var current = 0;
+  var dotsWrap = document.getElementById('dashDots');
+  document.getElementById('dashTotal').textContent = total;
+
+  // Créer les dots
+  for (var i = 0; i < total; i++) {
+    var dot = document.createElement('button');
+    dot.className = 'dash-dot' + (i === 0 ? ' active' : '');
+    dot.dataset.index = i;
+    dot.addEventListener('click', function(e) { goTo(parseInt(e.target.dataset.index)); });
+    dotsWrap.appendChild(dot);
+  }
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    slides.style.transform = 'translateX(-' + (current * 100) + '%)';
+    document.getElementById('dashCurrent').textContent = current + 1;
+    document.querySelectorAll('.dash-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  document.getElementById('dashPrev').addEventListener('click', function() { goTo(current - 1); });
+  document.getElementById('dashNext').addEventListener('click', function() { goTo(current + 1); });
+
+  // Swipe sur mobile
+  var startX = 0;
+  slides.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+  slides.addEventListener('touchend', function(e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+  });
+})();
+</script>
+</body>
+</html>
