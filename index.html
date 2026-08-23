@@ -322,8 +322,6 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
   margin-left: 3px;
 }
 
-/
-
 .testi-top-badge {
   display: inline-flex;
   align-items: center;
@@ -692,19 +690,6 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
   stroke-width: 3;
   fill: none;
 }
-.testi-video-fs-close:hover {
-  background: var(--purple);
-  transform: rotate(90deg);
-}
-.testi-video-fs-close svg {
-  width: 20px;
-  height: 20px;
-  stroke: var(--white);
-  stroke-width: 2.5;
-  fill: none;
-}
---gold: #FFB84A;
---green: #34d399;
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
@@ -717,6 +702,8 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
     --white: #F2EEF9;
     --muted: rgba(242,238,249,0.45);
     --border: rgba(123,63,228,0.22);
+    --gold: #FFB84A;
+    --green: #34d399;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1654,15 +1641,15 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
 <!-- NAV -->
 <nav>
   <div class="nav-left">
-    <a  href="ecommaster.world" onclick="event.stopPropagation()"onclick="event.stopPropagation()" class="nav-logo">ECOM <span>MASTER</span></a>
+    <a href="/" class="nav-logo">ECOM <span>MASTER</span></a>
     <div class="menu-wrap">
       <button class="menu-trigger" id="menuTrigger" aria-expanded="false" aria-haspopup="true">
         Menu
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <div class="menu-dropdown" id="menuDropdown" role="menu">
-        <a href="ecommaster.world" onclick="event.stopPropagation()"onclick="event.stopPropagation()"class="active">Accueil</a>
-        <a href="/tips.html" onclick="event.stopPropagation()"onclick="event.stopPropagation()">Tips Organique</a>
+        <a href="/" class="active">Accueil</a>
+        <a href="/tips.html">Tips Organique</a>
       </div>
     </div>
   </div>
@@ -1690,7 +1677,7 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
     </p>
     <div class="hero-actions">
       
-      <a href="ecommaster.world/tips.html" onclick="event.stopPropagation()"onclick="event.stopPropagation()" class="btn-ghost">Découvrir la méthode →</a>
+      <a href="/tips.html" class="btn-ghost">Découvrir la méthode →</a>
     </div>
   </div>
 </section>
@@ -1744,9 +1731,6 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
 
   <div class="testi-card" data-type="video">
     <video src="https://cdn.shopify.com/videos/c/o/v/8e30071adcb24d339f43b71ba8a40704.mov" playsinline preload="metadata" loop></video>
-   
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-    </button>
     <div class="testi-overlay">
       <div class="testi-top-badge">Témoignage 01</div>
       <div class="testi-bottom">
@@ -1761,9 +1745,6 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
 
   <div class="testi-card" data-type="video">
     <video src="https://cdn.shopify.com/videos/c/o/v/62714e4d1c2b42f7b4c07b1ac8ff6387.mov" playsinline preload="metadata" loop></video>
-    
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-    </button>
     <div class="testi-overlay">
       <div class="testi-top-badge">Témoignage 02</div>
       <div class="testi-bottom">
@@ -1778,9 +1759,6 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
 
   <div class="testi-card" data-type="video">
     <video src="https://cdn.shopify.com/videos/c/o/v/71d8b5c0e9a446a9841f10d4b62054e6.mp4" playsinline preload="metadata" loop></video>
-    
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-    </button>
     <div class="testi-overlay">
       <div class="testi-top-badge">Témoignage 03</div>
       <div class="testi-bottom">
@@ -1894,7 +1872,7 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
   </div>
 </section>
 
-<<!-- WHAT YOU LEARN -->
+<!-- WHAT YOU LEARN -->
 <section style="padding:5rem 6vw; background:var(--black2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div style="max-width:1100px; margin:0 auto;">
     <div class="learn-header">
@@ -1902,7 +1880,7 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
         <div class="section-tag">Le programme</div>
         <h2 class="section-title">CE QUE TU VAS <span>MAÎTRISER</span></h2>
       </div>
-      <a href="ecommaster.world/tips.html" onclick="event.stopPropagation()"onclick="event.stopPropagation()" target="_blank" class="btn-primary">Commencer maintenant →</a>
+      <a href="/tips.html" target="_blank" class="btn-primary">Commencer maintenant →</a>
     </div>
 
     <!-- TABS -->
@@ -2087,25 +2065,23 @@ a[href*="discord"] { padding: 0.6rem 0.9rem !important; font-size: 0.75rem !impo
 
     <div class="founders-bios">
       <div class="founder-card">
-        <!-- FIX: FAHD en blanc via .founder-name { color: var(--white) } -->
         <div class="founder-name">FAHD</div>
         <div class="founder-role">21 ans · Co-Fondateur · ECOM MASTER</div>
         <p class="founder-bio">
          Spécialisé en <strong style="color:#6C63FF;">marketing IA</strong> et en <strong style="color:#6C63FF;">création de marques</strong>, Fahd a participé à la création de <strong><u>plus de 4 marques reconnues mondialement</u></strong>.
-Il maîtrise l’art de concevoir des <strong>angles marketing performants</strong> et des <strong>créas optimisées grâce à l’intelligence artificielle</strong>.
-Grâce à ses différentes boutiques, il a généré <strong style="color:#00C897;">+700 000€ de chiffre d’affaires</strong>.
-Son expertise : <strong><u>exploiter l’IA pour produire des contenus organiques puissants</u></strong> et maximiser la performance marketing.
+Il maîtrise l'art de concevoir des <strong>angles marketing performants</strong> et des <strong>créas optimisées grâce à l'intelligence artificielle</strong>.
+Grâce à ses différentes boutiques, il a généré <strong style="color:#00C897;">+700 000€ de chiffre d'affaires</strong>.
+Son expertise : <strong><u>exploiter l'IA pour produire des contenus organiques puissants</u></strong> et maximiser la performance marketing.
         </p>
       </div>
       <div class="founder-card">
-        <!-- FIX: ADAM en blanc via .founder-name { color: var(--white) } -->
         <div class="founder-name">ADAM</div>
         <div class="founder-role">20 ans · Co-Fondateur · ECOM MASTER</div>
         <p class="founder-bio">
           Spécialisé en <strong style="color:#A78BFA;">développement web</strong> et en <strong style="color:#A78BFA;">branding</strong>, Adam combine <strong>intelligence artificielle</strong> et <strong>vision marketing</strong> pour créer des sites performants et impactants.
-Il maîtrise la <strong>structure</strong>, le <strong>design</strong> et l’<strong>optimisation</strong> pour transformer une idée en <strong><u>véritable machine à vendre</u></strong>.
-Grâce à une approche <strong><u>100% organique</u></strong>, il a généré <strong style="color:#34D399;">+450K€ de chiffre d’affaires</strong> à travers ses boutiques.
-<strong style="color:#C4B5FD;"><u>Également spécialisé en TikTok Ads</u>, il maîtrise le passage de l’organique au paid pour scaler efficacement et générer des résultats constants.</strong>
+Il maîtrise la <strong>structure</strong>, le <strong>design</strong> et l'<strong>optimisation</strong> pour transformer une idée en <strong><u>véritable machine à vendre</u></strong>.
+Grâce à une approche <strong><u>100% organique</u></strong>, il a généré <strong style="color:#34D399;">+450K€ de chiffre d'affaires</strong> à travers ses boutiques.
+<strong style="color:#C4B5FD;"><u>Également spécialisé en TikTok Ads</u>, il maîtrise le passage de l'organique au paid pour scaler efficacement et générer des résultats constants.</strong>
         </p>
       </div>
     </div>
@@ -2335,7 +2311,7 @@ function activateFunnel(el, step) {
 <!-- CTA VERS PAGE TIPS -->
 <div class="tips-cta-wrap">
   <div class="tips-cta-label">Encore plus de value</div>
-  <a href="ecommaster.world/tips.html" onclick="event.stopPropagation()">Tips Organique class="tips-cta">
+  <a href="/tips.html" class="tips-cta">
     <span class="tips-cta-text">Voir tous les tips gratuits</span>
     <span class="tips-cta-arrow">
       <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -2426,15 +2402,10 @@ function activateFunnel(el, step) {
   // --- VIDÉOS ---
 cards.forEach(function(card) {
   var video = card.querySelector('video');
-  var fsBtn = card.querySelector('.testi-fullscreen-btn');
   if (!video) return;
-
-  
 
   // Clic sur la card = play/pause
   card.addEventListener('click', function(e) {
-    if (e.target.closest('.testi-fullscreen-btn')) return;
-
     cards.forEach(function(other) {
       if (other !== card) {
         var v = other.querySelector('video');
@@ -2455,8 +2426,6 @@ cards.forEach(function(card) {
     }
   });
 });
-
-    
 
   // --- PHOTOS (lightbox) ---
   photoCards.forEach(function(card) {
