@@ -633,7 +633,7 @@
   gap: 1.3rem;
   perspective: 1500px;
 
-  align-items: start; /* 🔥 ÇA c’est la clé */
+  align-items: start; /* 🔥 ÇA c'est la clé */
 }
 
 /* Card container */
@@ -660,7 +660,6 @@
   display: flex;
   flex-direction: column;
   transition: border-color 0.25s, box-shadow 0.25s;
-  
 }
 .tip-card-back {
   transform: rotateY(180deg);
@@ -1655,9 +1654,7 @@
 }
 
 /* ══════════════════════════════════════════════
-   /* ══════════════════════════════════════════════
    QUIZ PÉDAGOGIQUE — CSS COMPLET
-   Colle dans ton <style>
    ══════════════════════════════════════════════ */
 
 .quiz {
@@ -2119,7 +2116,7 @@
   .quiz-recap { padding: 1.3rem 1.2rem; }
 }
 
-<!-- CTA FINAL -->
+/* ── CTA FINAL ── */
 
   .cta-final-v2 {
     max-width: 900px;
@@ -2232,7 +2229,7 @@
   font-weight: 600;
   margin-left: auto;
   margin-right: auto;
-  width: fit-content; /* ← ajoute ça */
+  width: fit-content;
 }
   .cta-v2-badge::before {
     content: '●';
@@ -2408,18 +2405,17 @@
 <body>
 
 <!-- NAV -->
-<!-- NAV -->
 <nav>
   <div class="nav-left">
-    <a href="ecommaster.world" onclick="event.stopPropagation()"onclick="event.stopPropagation()" class="nav-logo">ECOM <span>MASTER</span></a>
+    <a href="/" class="nav-logo">ECOM <span>MASTER</span></a>
     <div class="menu-wrap">
       <button class="menu-trigger" id="menuTrigger" aria-expanded="false" aria-haspopup="true">
         Menu
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <div class="menu-dropdown" id="menuDropdown" role="menu">
-        <a href="ecommaster.world" onclick="event.stopPropagation()"onclick="event.stopPropagation()">Accueil</a>
-        <a href="ecommaster.world/tips.html" onclick="event.stopPropagation()"onclick="event.stopPropagation()" class="active">Tips Organique</a>
+        <a href="/">Accueil</a>
+        <a href="/tips.html" class="active">Tips Organique</a>
       </div>
     </div>
   </div>
@@ -2578,9 +2574,6 @@
   Si tu regardes un peu partout, t'as l'impression qu'il n'y a qu'<strong>une seule manière</strong> de faire de l'argent en e-commerce : <strong style="color:var(--purple-light); text-decoration: underline; text-decoration-color: var(--purple); text-decoration-thickness: 2px; text-underline-offset: 3px;">les ads</strong>. Tout le monde en parle. Tout le monde te bombarde avec des termes compliqués — <mark style="background: linear-gradient(120deg, rgba(123,63,228,0.25), rgba(169,111,245,0.25)); color: var(--white); padding: 0 6px; border-radius: 3px;">ROAS</mark>, <mark style="background: linear-gradient(120deg, rgba(123,63,228,0.25), rgba(169,111,245,0.25)); color: var(--white); padding: 0 6px; border-radius: 3px;">CPA</mark>, <mark style="background: linear-gradient(120deg, rgba(123,63,228,0.25), rgba(169,111,245,0.25)); color: var(--white); padding: 0 6px; border-radius: 3px;">CPM</mark>, <mark style="background: linear-gradient(120deg, rgba(123,63,228,0.25), rgba(169,111,245,0.25)); color: var(--white); padding: 0 6px; border-radius: 3px;">CTR</mark>, pixel Meta, Advantage+, creative testing, scaling vertical, scaling horizontal… comme si <strong><em>balancer du cash sur Meta Ads</em></strong> et <strong><em>TikTok Ads</em></strong> était la <strong style="color:var(--purple-light);">seule voie</strong>.
 </p>
 
-
-      
-
 <p>
   On te dit de lancer des <strong>campagnes CBO</strong>, de tester <strong>20 créas par semaine</strong>, d'optimiser ton <strong style="border-bottom: 2px dotted var(--purple-light);">ROAS</strong>, de scaler une fois le <strong style="border-bottom: 2px dotted var(--purple-light);">CPA cible</strong> atteint, de lancer du <strong>retargeting</strong>, du <strong>lookalike</strong>, d'optimiser ton <strong style="border-bottom: 2px dotted var(--purple-light);">AOV</strong>… comme si c'était <em style="color:var(--muted);">simple</em>. Comme si tout le monde avait <span style="background: rgba(255,100,100,0.12); color: #ff8080; padding: 1px 8px; border-radius: 4px; font-weight: 500;">5 000€ de budget test</span> à cramer avant de voir la première vente rentable.
 </p>
@@ -2728,7 +2721,7 @@
 <p>
   Derniers éléments à ne pas négliger : le <strong style="border-bottom: 2px dotted var(--purple-light);">CTA</strong> <em style="color:var(--muted); font-size: 0.88em;">(Call To Action — l'appel à l'action : "lien en bio", "swipe up", "commente OUI")</em>, le <strong style="border-bottom: 2px dotted var(--purple-light);">share rate</strong> <em style="color:var(--muted); font-size: 0.88em;">(% de gens qui partagent ta vidéo — indicateur ultime pour l'algo)</em>, et le <strong style="border-bottom: 2px dotted var(--purple-light);">loop</strong> <em style="color:var(--muted); font-size: 0.88em;">(fin qui donne envie de revoir le début, gonfle artificiellement le watch time)</em>. <strong style="color:var(--white);">Ces détails font la différence entre 500 vues et 500 000.</strong>
 </p>
-      
+    </div>
 
     <div class="chapter">
       <div class="chapter-num">CHAPITRE 04</div>
@@ -3292,10 +3285,7 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     HTML DU QUIZ — remplace ta section <section class="quiz">...</section>
-     ══════════════════════════════════════════════ -->
- 
+<!-- QUIZ -->
 <section class="quiz">
   <div class="quiz-inner">
     <div class="section-tag">Teste-toi & apprends</div>
@@ -3385,8 +3375,6 @@
     </div>
   </div>
 </section>
-
-
 
 <!-- FOOTER -->
 <footer>
